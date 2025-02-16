@@ -2,6 +2,7 @@ import { BaseComponent } from "./BaseComponent";
 
 export class  GraphComponent extends BaseComponent{
     static observedAttributes = ['data']
+    barChart = null;
 
     constructor() {
         super();
@@ -30,7 +31,11 @@ export class  GraphComponent extends BaseComponent{
                     <canvas id="timeChart"></canvas>
                 </div>
                 <div class="col-5">
-                    graph2
+                    <ul>
+                        <li>Total invested capital: </li>
+                        <li>Total gain</li>
+                    </ul>
+                    <canvas id="pieChart"></canvas>  
                 </div>
             </div>
         </section>
@@ -39,8 +44,10 @@ export class  GraphComponent extends BaseComponent{
 
     updateChart(){
         const ctx = this.querySelector('#timeChart');
-        
-        new Chart(ctx, {
+        if (this.barChart) {
+            this.barChart.destroy();
+        }
+        this.barChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: this.data.map(e => e.year),

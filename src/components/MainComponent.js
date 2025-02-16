@@ -17,6 +17,7 @@ export class MainComponent extends HTMLElement{
     }
 
     handleCalculate(formValues){
+        
         this.values = []
         const currentYear = new Date().getFullYear()
         let t = Number(formValues.investmentYears)
@@ -43,6 +44,7 @@ export class MainComponent extends HTMLElement{
 
     reloadCharts(){
         const graphComponent = this.querySelector('graph-component');
+        
         if (graphComponent) {
             graphComponent.setAttribute('data', JSON.stringify(this.values));
         }
