@@ -2,7 +2,7 @@ import { BaseComponent } from "./BaseComponent";
 
 export class  GraphComponent extends BaseComponent{
     static observedAttributes = ['data']
-    barChart = null;
+    charts = [];
 
     constructor() {
         super();
@@ -16,7 +16,7 @@ export class  GraphComponent extends BaseComponent{
         if (name === 'data' && newValue) {
             try {
                 this.data = JSON.parse(newValue);
-                setTimeout(() => this.updateChart(), 0);
+                setTimeout(() => this.updateCharts(), 0);
             } catch (error) {
                 console.error('Error parsing data:', error);
             }
@@ -42,12 +42,12 @@ export class  GraphComponent extends BaseComponent{
         `;
     }
 
-    updateChart(){
+    updateCharts(){
         const ctx = this.querySelector('#timeChart');
-        if (this.barChart) {
-            this.barChart.destroy();
+        if (this.charts.length > 0) {
+            this.charts.forEach(chart => chart.destroy());
         }
-        this.barChart = new Chart(ctx, {
+        this.charts.push(new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: this.data.map(e => e.year),
@@ -86,7 +86,7 @@ export class  GraphComponent extends BaseComponent{
                     }
                   }
               }
-        })
+        }))
     }
 
 
