@@ -19,28 +19,17 @@ The **Compound Interest Calculator** is a tool that computes the future value of
 5. ✅ Get the future value and total interest earned.
 
 ## 📐 Formula Used
-The compound interest is calculated using the following approach:
-
-```
-let t = Number(formValues.investmentYears)
-let M = Number(formValues.startCapital)
-let r = Number(formValues.rateOfReturn) / 100 
-let I = Number(formValues.monthlyContribution) * 12
-let c = M;
-
-for(let j = 0; j < t; j++) {
-    c = c * (1 + r) + I * ((Math.pow(1 + r, 1) - 1) / r)
-}
-```
+$$
+C = C_0 \times (1 + r)^t + I \times \left( \frac{(1 + r)^t - 1}{r} \right)
+$$
 
 Where:
-- *c* = Future value of the investment/loan
-- *M* = Initial principal amount
-- *r* = Annual interest rate (in decimal form)
-- *I* = Total annual contributions
-- *t* = Number of years
+- \( C \) = Future value (end of period)
+- \( C_0 \) = Initial capital (starting amount)
+- \( r \) = Rate of return (annual interest rate, as a decimal)
+- \( I \) = Annual contribution (monthly savings × 12)
+- \( t \) = Number of years
 
-The yearly values are recorded, showing the base capital, contributions, and gains over time.
 
 ## 🏗 Installation
 1. 📥 Clone the repository:
