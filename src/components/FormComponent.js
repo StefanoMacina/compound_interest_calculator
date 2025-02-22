@@ -17,6 +17,7 @@ export class FormComponent extends BaseComponent {
     getTemplate() {
         return /*html*/ `
         <div class="container p-4">
+        <h3 class="text-start text-primary">Your plan</h3>
             <div class="row g-3">
                 <div class="col-12 col-md-6">
                     <label for="start-capital" class="form-label">Starting Amount</label>
