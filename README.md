@@ -3,7 +3,7 @@
 ## 🌍 Overview
 The **Compound Interest Calculator** is a tool that computes the future value of an investment or loan based on the initial principal, interest rate, compounding frequency, and time. It helps estimate how interest accumulates over time, considering interest earned on both the principal and previously accrued interest.
 
-🔗 **Try it here:** [Compound Interest Calculator](https://yourwebsite.com)
+🔗 **Try it here:** [Compound Interest Calculator](https://www.stefanomacinaleone.it/compound-interest-calculator/)
 
 ## ✨ Features
 - 📊 Calculates compound interest based on user-defined parameters.
@@ -45,13 +45,16 @@ The yearly values are recorded, showing the base capital, contributions, and gai
 ## 🏗 Installation
 1. 📥 Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/compound-interest-calculator.git
+   git clone https://github.com/StefanoMacina/compound_interest_calculator.git
    ```
 2. 📂 Navigate to the project directory:
    ```sh
    cd compound-interest-calculator
    ```
 3. ⚙️ Install dependencies (if applicable).
+    ```sh
+    npm install
+    ```
 
 ## 📜 License
 This project is licensed under the MIT License.
@@ -61,5 +64,4 @@ Feel free to contribute by submitting issues or pull requests.
 
 ---
 
-🚀 **Start calculating your compound interest today!**
 
