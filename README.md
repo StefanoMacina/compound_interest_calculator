@@ -3,7 +3,7 @@
 ## 🌍 Overview
 The **Compound Interest Calculator** is a tool that computes the future value of an investment or loan based on the initial principal, interest rate, compounding frequency, and time. It helps estimate how interest accumulates over time, considering interest earned on both the principal and previously accrued interest.
 
-🔗 **Try it here:** [Compound Interest Calculator](https://www.stefanomacinaleone.it/compound-interest-calculator/)
+🔗 **Try it here:** [Compound Interest Calculator](https://www.stefanomacinaleone.it/app/compound-interest-calculator/)
 
 ## ✨ Features
 - 📊 Calculates compound interest based on user-defined parameters.
